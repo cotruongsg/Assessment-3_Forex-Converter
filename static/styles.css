@@ -1,0 +1,50 @@
+.messages p {
+    padding : 0.2rem;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.messages .error {
+    background-color: rgba(238, 46, 21, 0.753);
+}
+
+
+/* form{   
+    margin: auto;
+    width: 500px;
+    border: 5px solid #da1832;
+    border-radius: 10px;
+    padding: 15px;
+    align-content: center;   
+} */
+
+
+/* input {
+    background-color: whitesmoke;
+    padding: 15px;   
+    /* box-sizing : border-box - Make input inside form and not overlapped to the form */
+    /* the total width and height of an element includes the padding and border of the element */
+    /* box-sizing: border-box; 
+    font-weight: bold; 
+    /* width :100% Make all input form with the same width , same alignment */
+    /* width: 100%; */
+/* } */ 
+
+/* button{
+    padding: 10px;
+    background-color: rgb(25, 27, 116);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;   
+    margin-top: 10px;
+  } */
+
+/* div{
+    background-color: rgb(214, 122, 16);
+} */
+
+
+

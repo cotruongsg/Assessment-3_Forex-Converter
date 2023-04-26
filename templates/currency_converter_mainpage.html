@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}MAIN CONVERTER FORM{% endblock %}
+{% block content %}
+
+    <h1 class="text-center text-primary bg-info p-3">FOREX CONVERTER</h1>
+
+    <form action="/currencyconversion" class="mx-auto p-4 bg-light rounded"  method="POST">
+        <!-- Use 'with messages' to check arguments in flash message function is provided or not so that avoid to put permanently section tag in html without adding category arguments  -->
+        <!-- Alert Error when entered wrong currency code -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <section class="messages">
+                    <!-- Flash message -->
+                    {% for category,msg in messages %}                   
+                        <p class="{{category}}">{{msg}}</p>
+                    {% endfor %}
+                </section>
+            {% endif %}
+        {% endwith %}      
+ 
+        <!-- Create a Currency Form -->
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Converting from</label>
+          <div class="col-sm-10">
+            <input type="text" name="from_currency" class="form-control" placeholder="Enter converting from" value="{{ from_currency }}" required>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Converting to</label>
+          <div class="col-sm-10">
+            <input type="text" name="to_currency" class="form-control" placeholder="Enter converting to" value="{{ to_currency }}" required>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Amount</label>
+          <div class="col-sm-10">
+            <input type="text" name="amount" class="form-control" placeholder="Enter amount" value="{{ amount }}" required>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-sm">Convert</button>
+
+    </form>
+
+{% endblock %}
+      

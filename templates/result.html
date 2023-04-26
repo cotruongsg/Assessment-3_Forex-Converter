@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}RESULT FORM{% endblock %}
+{% block content %}
+
+    <h1 class="text-center text-primary bg-info p-3">AMOUNT</h1>
+    <form action="/" class="mx-auto p-4 bg-light rounded">
+      <p>The result is {{ symbol }} {{ result }}</p>
+      <button class="btn btn-primary btn-sm">Home</button>
+    </form>
+
+{% endblock %}
